@@ -114,7 +114,6 @@ void callbackDispatcher() {
           updateAllPages().timeout(const Duration(minutes: 1)),
         String() => throw Exception("No such task named $task"),
       };
-      return true;
     } catch (e, s) {
       print("Periodic task $task failed: $e, $s");
       return Future.value(false);
